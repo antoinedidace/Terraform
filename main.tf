@@ -12,8 +12,9 @@ terraform {
   backend "local" {}
 }
 
-module "aws_vpc" {
-  source = "./module/aws/vpc"
+module "azure_kubernetes" {
+  source = "./module/azure/kubernetes"
   environment = var.environment
+  subscription_id = var.azure_subscription_id
 }
  
